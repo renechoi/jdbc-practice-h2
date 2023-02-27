@@ -3,8 +3,18 @@ brew로 h2 접속하기
 h2 -web
 
 
-기존에 만든 스프링부트와 겹치기 때문에 아래와 같이 접속
 
+RENE/h2 콘솔 터미널
+ cd bin
+
+./h2.sh
+
+jdbc:h2:tcp://localhost/~/testcase
+
+
+
+<-- 과거 -->
+기존에 만든 스프링부트와 겹치기 때문에 아래와 같이 접속
 jdbc:h2:mem:testdb
 
 
