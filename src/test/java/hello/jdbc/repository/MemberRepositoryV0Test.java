@@ -8,12 +8,10 @@ import org.junit.jupiter.api.Test;
 import java.sql.SQLException;
 import java.util.NoSuchElementException;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 @Slf4j
-class MemberRepositoryVOTest {
+class MemberRepositoryV0Test {
 
-    MemberRepositoryVO repository = new MemberRepositoryVO();
+    MemberRepositoryV0 repository = new MemberRepositoryV0();
 
     @Test
     void crud() throws SQLException {
