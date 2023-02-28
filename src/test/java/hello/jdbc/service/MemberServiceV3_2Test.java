@@ -1,7 +1,6 @@
 package hello.jdbc.service;
 
 import hello.jdbc.domain.Member;
-import hello.jdbc.repository.MemberRepositoryV2;
 import hello.jdbc.repository.MemberRepositoryV3;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -19,9 +18,9 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 /**
  * 트랜잭션 - 커넥션 파라미터 전달 방식 동기화
  */
-class MemberServiceV3Test {
+class MemberServiceV3_2Test {
     private MemberRepositoryV3 memberRepository;
-    private MemberServiceV3_1 memberService;
+    private MemberServiceV3_2 memberService;
 
     @BeforeEach
     void before() {
@@ -29,7 +28,7 @@ class MemberServiceV3Test {
                 USERNAME, PASSWORD);
         memberRepository = new MemberRepositoryV3(dataSource);
         DataSourceTransactionManager transactionManager = new DataSourceTransactionManager(dataSource);
-        memberService = new MemberServiceV3_1(transactionManager, memberRepository);
+        memberService = new MemberServiceV3_2(transactionManager, memberRepository);
     }
 
     @AfterEach
